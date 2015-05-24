@@ -1,0 +1,204 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Journal Article
+% LaTeX Template
+% Version 1.3 (9/9/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[twoside]{article}
+\usepackage{multicol} % Used for the two-column layout of the document
+
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage{textcomp} % Slightly tweak font spacing for aesthetics
+
+\usepackage{graphicx}
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+
+\usepackage{wrapfig}
+\usepackage[export]{adjustbox}
+
+%\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+%\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\usepackage[fleqn]{amsmath}
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\rhead{Lars C. Schwensen}
+\lhead{Energieübertragung induktiv gekoppelter RFID Transponder}
+%\fancyfoot[RO,RO]{\thepage} % Custom footer text
+
+
+\input{01_Frequenzen.tex}
+\input{02_Schwingkreis.tex}
+\input{03_InduktiveKopplung.tex}
+\input{04_Beispiel.tex}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\newcommand*{\titlePage}{\begingroup % Create the command for including the title page in the document
+\newlength{\drop} % Command for generating a specific amount of whitespace
+\drop=0.1\textheight % Define the command as 10% of the total text height
+%\hdrop=0.05\textheight % Define the command as 5% of the total text height
+\centering % Center all text
+
+\rule{\textwidth}{1pt}\par % Thick horizontal line
+\vspace{2pt}\vspace{-\baselineskip} % Whitespace between lines
+\rule{\textwidth}{0.4pt}\par % Thin horizontal line
+
+\centering % Center all text
+
+{Hochschule für Angewandte Wissenschaften Hamburg}\par
+{Fakultät Technik und Informatik}\par
+{Department Informatik}\par
+\vspace{0.25\drop}
+
+\vspace{0.75\drop}
+
+%\textcolor{Black}{ % Black font color
+{\Huge Energieübertragung}\\[0.5\baselineskip] % Title line 1
+{\Large induktiv gekoppelter}\\[0.75\baselineskip] % Title line 2
+{\Huge RFID Transponder} % Title line 3
+
+\vspace{\drop}
+
+{\Large Hausarbeit}
+\vspace{0.75\drop}
+
+{Wahlpflichtmodul: RFID-Technik}\par
+{Betreuer: Prof. Dr. Fohl}\par
+
+\vspace{2.5\drop}
+
+{Schwensen, Lars Christian}\par
+{Matrikel-Nr.: 2124933}\par
+{Fachsemester 6}\par
+
+\vspace{0.25\drop} % Whitespace between the title and short horizontal line
+\rule{0.3\textwidth}{0.4pt}\par % Short horizontal line under the title
+{\today}\par
+
+\rule{\textwidth}{0.4pt}\par % Thin horizontal line
+\vspace{2pt}\vspace{-\baselineskip} % Whitespace between lines
+\rule{\textwidth}{1pt}\par % Thick horizontal line
+\vspace{2.5\drop}
+\endgroup}
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+\newcommand*{\myAbstract}{\begingroup
+\begin{abstract}
+{\noindent Eine Grundlegende Eigenschaft von RFID-Systemen ist die kontaktlose Energieübertragung. Im Rahmen dieser Hausarbeit wird die induktive Kopplung in ihrer Funktionalität und Effektivität untersucht um sich der Frage zu widmen welchen Einfluss die Parametriesierung der Antennen auf die Energieübertragung hat.
+}
+
+\end{abstract}
+\endgroup}
+
+%----------------------------------------------------------------------------------------
+%	Introduction
+%----------------------------------------------------------------------------------------
+\newcommand*{\introduction}{\begingroup
+\section{Einleitung}\label{sec:einleitung}
+{\noindent Sich der Nutzung von RFID zu entziehen ist in der heutigen Zeit nahezu unmöglich. In vielen Situationen werden wir mit dieser Technik konfrontiert und wissen oftmals gar nicht, dass Diese dahinter steckt. Bei dem Einen ist es das Auto, welches sich ganz bequem per Knopfdruck aus der Ferne verriegeln lässt, bei dem Anderen ist es der Diebstahlschutz von den Schuhen welcher uns erinnert die Ware noch eben zu bezahlen. Zwei von unzähligen Beispielen wie sie in Bauform, Sicherheitsaspekten und Produktionskosten nicht unterschiedlicher sein können, aber dennoch der gleichen Technologie, nämlich der RFID, angehören.
+}
+\endgroup}
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Conclusion
+%----------------------------------------------------------------------------------------
+\newcommand*{\conclusion}{\begingroup
+\section{Fazit}\label{sec:conclusion}
+{\noindent Induktiv gekoppelte RFID-Systeme sind leicht und kostengünstig realisierbar. Außerdem sind winzige Bauformen möglich. Zu Berücksichtigen ist natürlich, dass die Reichweite besonders bei passiven Systemen stark eingeschränkt ist. Sind keine hohen Reichweiten erforderlich, so bietet sich diese Form der Energieübertragung an.
+}
+\endgroup}
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+\newcommand*{\myBibliography}{\begingroup
+\begin{thebibliography}{99} 
+\addcontentsline{toc}{section}{Literaturverzeichnis} 
+\bibitem{Hagmann:Gerd}
+\newblock Hagmann, Gerd: Grundlagen der Elektrotechnik. 16. Auflage: AULA-Verlag GmbH, 2013
+
+\bibitem{Stiny:leonard}
+\newblock Stiny, Leonard: Grundwissen Elektrotechnik. 5. Auflage: Franzis Verlag GmbH, 2009
+ 
+\bibitem{Finkenzeller:Klaus}
+\newblock Finkenzeller, Klaus: RFID Handbuch. 5. Auflage: Carl Hanser Verlag München, 2008
+ 
+\bibitem{Schalk:Gerhard}
+\newblock Schalk, Gerhard und Bienert, Renke: RFID MIFARE und kontaktlose Smartcards angewandt. 1. Auflage: Elektor-Verlag, 2011
+ 
+\end{thebibliography}
+\endgroup}
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\titlePage\thispagestyle{empty} % Insert title
+%\begin{multicols}{2} % Two-column layout throughout the main article text
+\boldmath
+\myAbstract
+\tableofcontents
+\clearpage
+\rfoot{\thepage}
+\introduction
+\rfid
+\inductiveCoupling
+\resonanceCircuit
+\example
+\conclusion
+\clearpage
+\myBibliography
+
+%\end{multicols}
+
+\end{document}
+%------------------------------------------------
+
