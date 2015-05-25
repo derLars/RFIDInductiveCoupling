@@ -65,13 +65,13 @@
   H = \frac{I}{2\pi \cdot r}
 \end{equation}
 
-\noindent Auf Höhe des Leiters ist die Feldstärke \textbf{H} somit ausschließlich vom Abstand \textbf{r} abhängig. Schwieriger ist die Betrachtung eines zylindrischen Leiters wenn dieser nicht einer Geraden entspricht. Die Feldstärke \(d\vec{H}\) an einem Punkt \textbf{p}, ausgehend von einem Leiterstück \textbf{dl}, wie in Abbildung \ref{fieldStrengthCurved} dargestellt, lässt sich mithilfe des Gesetz von Biot und Savart ermitteln
+\noindent Auf Höhe des Leiters ist die Feldstärke \textbf{H} somit ausschließlich vom Abstand \textbf{r} abhängig. Schwieriger ist die Betrachtung eines zylindrischen Leiters wenn dieser nicht einer Geraden entspricht. Die Feldstärke \(d\vec{H}\) an einem Punkt \textbf{p}, ausgehend von einem Leiterstück \textbf{dl}, wie in Abbildung \ref{fieldStrengthCurved} dargestellt, lässt sich mithilfe des Gesetz von Biot und Savart ermitteln.
 
 \begin{equation}
   d\vec{H} = \frac{I}{4\pi} \cdot \frac{d\vec{l} \times \vec{p}}{p^3}
 \end{equation}
 
-\noindent Die resultierende Feldstärke \(\vec{H}_p\), ausgehend vom gesamten Leiter \textbf{L}, errechnet sich durch integrieren dieser Teilergebnisse 
+\noindent Die resultierende Feldstärke \(\vec{H}_p\), ausgehend vom gesamten Leiter \textbf{L}, errechnet sich durch integrieren dieser Teilergebnisse.
 
 \begin{equation}
   \vec{H}_p = \frac{I}{4\pi} \cdot \int\limits_L \frac{d\vec{l} \times \vec{p}}{p^3}
@@ -113,7 +113,7 @@
     cos(\beta) = \frac{r}{p}
   \end{equation} 
   
-  \item Der Satz des Pythagoras erlaubt es p mithilfe des Spulenradius \textbf{r} und dem Abstand \textbf{x} zu berechnen
+  \item Der Satz des Pythagoras erlaubt es \textbf{p} mithilfe des Spulenradius \textbf{r} und dem Abstand \textbf{x} zu berechnen.
   
   \begin{equation}
     p = \sqrt{r^2 + x^2}
@@ -201,7 +201,7 @@
  K = \frac{M}{\sqrt{L_1 \cdot L_2}}
 \end{equation}
  
-\noindent in Abhängigkeit von der jeweiligen Induktivität \textbf{L} der Spulen und der Gegeninduktivität \textbf{M} dieser Spulen treffen\footnote{Finkenzeller: RFID Handbuch, S. 78}. Als physikalische Größe drückt die Induktivität \textbf{L} aus, wie groß die Fähigkeit einer Spule ist, eine Induktionsspannung \(U_{ind}\) zu erzeugen\footnote{Stiny: Grundwissen Elektrotechnik, S. 100} und lässt sich nach folgender Gleichung berechnen
+\noindent in Abhängigkeit von der jeweiligen Induktivität \textbf{L} der Spulen und der Gegeninduktivität \textbf{M} dieser Spulen treffen\footnote{Finkenzeller: RFID Handbuch, S. 78}. Als physikalische Größe drückt die Induktivität \textbf{L} aus, wie groß die Fähigkeit einer Spule ist, eine Induktionsspannung \(U_{ind}\) zu erzeugen\footnote{Stiny: Grundwissen Elektrotechnik, S. 100} und lässt sich nach folgender Gleichung berechnen.
 
 \begin{equation}
  L = \mu \cdot A \cdot \frac{N^2}{I}
@@ -216,7 +216,7 @@
 \noindent verweist Finkenzeller auf die Näherungsformel 
 
 \begin{equation}
- L = \mu \cdot N^2 \cdot r_spule \cdot (2 \cdot \frac{r_spule}{d_leiter})
+ L = \mu \cdot N^2 \cdot r_{spule} \cdot (2 \cdot \frac{r_{spule}}{d_{leiter}})
 \end{equation}
 
 \noindent zur Berechnung der Induktivität \textbf{L}\footnote{Finkenzeller: RFID Handbuch, S. 76}. Als Einheit erhält die Induktivität \textbf{L}
@@ -246,11 +246,11 @@
 \noindent aus dem Kapitel \ref{sec:magneticfieldstrength}, sodass für die Gegeninduktivität \textbf{M} gekürzt gilt
 
 \begin{equation}
-  M = \frac{\mu \cdot \pi \cdot N_1 \cdot N_2 \cdot {r_1}^2 \cdot {r_2}^2}{2 \cdot \sqrt{(r^2 + x^2)^3}}
+  M = \frac{\mu \cdot \pi \cdot N_1 \cdot N_2 \cdot {r_1}^2 \cdot {r_2}^2}{2 \cdot \sqrt{({r_1}^2 + x^2)^3}}
   \label{eq:mutualInductance}
 \end{equation}
 
-\noindent Ein induktiv gekoppeltes System ist also von einer Vielzahl an Parametern abhängig. Wird für einen speziellen Anwendungsfall ein System geplant, ist es zunächst einmal sinnvoll sich der festen Paramter bewusst zu werden. So ist der Distanzbereich \textbf{x}, in dem das System zuverlässig funktionieren muss, oftmals spezifiziert. Auch haben sich für die Form der Transponder gewisse Formate etabliert, sodass die Spule \(L_2\) in der Regel fest vorgegeben ist. Damit bleibt letztendlich nur die Spule \(L_1\) des Lesegerätes als Möglichkeit der Einflussnahme. Wie muss die Antenne des Lesegerätes also dimensioniert werden um eine möglichst hohe Kopplung zu erreichen? Ist eine größere Antenne immer besser? Aufschluss darüber soll ein rechnerischer Versuch geben. Gegeben sei eine Transponderspule \(L_2\) mit einem Radius \(r_2 = 2cm\) und einer Länge \(l_2 = 1cm\). Ermittelt werden soll die Kopplung \textbf{K} in einem Abstand von \(0cm < x \leq 20cm\) bei drei verschiedenen Spulenradien \(r_1 = 2cm\), \(4cm\) und \(6cm\) der Lesegerätspule \(L_1\). Die Länge \(l_1 = 5cm\) der Spule sei ebenfalls konstant! 
+\noindent Ein induktiv gekoppeltes System ist also von einer Vielzahl an Parametern abhängig. Wird für einen speziellen Anwendungsfall ein System geplant, ist es zunächst einmal sinnvoll sich der festen Paramter bewusst zu werden. So ist der Distanzbereich \textbf{x}, in dem das System zuverlässig funktionieren muss, oftmals spezifiziert. Auch haben sich für die Form der Transponder gewisse Formate etabliert, sodass die Spule \(L_2\) in der Regel fest vorgegeben ist. Damit bleibt letztendlich nur die Spule \(L_1\) des Lesegerätes als Möglichkeit der Einflussnahme. Wie muss die Antenne des Lesegerätes also dimensioniert werden um eine möglichst hohe Kopplung zu erreichen? Ist eine größere Antenne immer besser? Aufschluss darüber soll ein rechnerischer Versuch geben. Gegeben sei eine Transponderspule \(L_2\) mit einem Radius \(r_2 = 2cm\) und einer Länge \(l_2 = 1cm\). Ermittelt werden soll die Kopplung \textbf{K} in einem Abstand von \(0cm < x \leq 20cm\) bei drei verschiedenen Spulenradien \(r_1 = 2cm\), \(4cm\) und \(6cm\) der Lesegerätspule \(L_1\). Die Länge \(l_1 = 5cm\) der Spule \(L_1\) sei ebenfalls konstant! 
 
 \begin{figure}[H]
   \centering
@@ -265,7 +265,7 @@
   r_1 \approx x
 \end{equation}
 
-\noindent Auch ist eine möglichst große Antenne nicht immer die beste Wahl. Der Vorteil einer größeren Antenne liegt darin, dass die Kopplung mit steigender Distanz weniger stark abfällt. Wird also von einem System erwartet, dass es sowohl bei geringen als auch bei höheren Distanzen zuverlässig arbeitet, ist eine größere Antenne von Vorteil. Zu dem gleichen Ergebnis sind Gerhard Schalk und Renke Bienert in ihrem Buch "RFID MIFARE und kontaktlose Smartcards angewandt" in einem ähnlichen Test gekommen. Schalk und Bienert haben ermittelt welcher Spulenradius für feste Distanzen ideal ist\footnote{Vgl. Schalk, Gerhard und Bienert, Renke: RFID MIFARE und kontaktlose Smartcards angewandt. 1. Auflage: Elektor-Verlag, S. 81}.
+\noindent Auch ist eine möglichst große Antenne nicht immer die beste Wahl. Der Vorteil einer größeren Antenne liegt darin, dass die Kopplung mit steigender Distanz weniger stark abfällt. Wird also von einem System erwartet, dass es sowohl bei geringen als auch bei höheren Distanzen zuverlässig arbeitet, ist eine größere Antenne von Vorteil. Zu dem gleichen Ergebnis sind Gerhard Schalk und Renke Bienert in ihrem Buch "RFID MIFARE und kontaktlose Smartcards angewandt" in einem ähnlichen Test gekommen. Schalk und Bienert haben ermittelt welcher Spulenradius für feste Distanzen ideal ist\footnote{Vgl. Schalk, Gerhard und Bienert, Renke: RFID MIFARE und kontaktlose Smartcards angewandt. 1. Auflage: Elektor-Verlag, S. 81}. Mitunter kann die Kopplung \textbf{K} sehr klein sein. Daraus folgt verhältnismäßig kleine induzierte Spannung \(U_{ind}\) an der Spule \(L_2\). Um dem Transponder IC dennoch eine ausreichend hohe Spannung zur Verfügung zu stellen beinhaltet die Transponderschaltung einen Resonanzkreis.
 
 
 }

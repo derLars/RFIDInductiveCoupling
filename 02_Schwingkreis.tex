@@ -25,7 +25,7 @@
     \end{minipage}  
 \end{wrapfigure}
 
-\noindent Resonanzkreise lassen sich generell in Reihenresonanzkreise (Abbildung \ref{resonance_circuit_serial_1}) und Parallelresonanzkreise (Abbildung \ref{resonance_circuit_parallel}) einteilen. Parallelresonanzkreise weisen die Eigenschaft auf, dass die Spannung an allen Stellen der Schaltung gleich und der Strom jeweils abhängig von den Bauelementen an der Messstelle ist. In einem Reihenresonanzkreis hingegen fließt an allen Stellen der gleiche Strom. Die Spannung an den Bauelementen variiert abhängig von der Dimensionierung jener. Diese Eigenschaften machen den Parallelresonanzkreis an dieser Stelle uninteressant. Deshalb wird dieser in diesem Dokument nicht weiter Thematisiert. Im Folgendem ist mit einem Resonanzkreis also immer ein Reihenresonanzkreis gemeint. Ein Resonanzkreis ist, wie der Name vermuten lässt, ein schwingfähiges System. Um zu verstehen wie diese Schwingungen zustande kommen, ist es sinnvoll sich zunächst einmal mit den beiden wichtigsten Bauelementen eines Resonsnzkreises, nämlich dem Kondensator \textbf{C} und der Spule \textbf{L}, zu befassen\footnote{Hagmann, Gerd: Grundlagen der Elektrotechnik. 16. Auflage: AULA-Verlag GmbH, S. 296 ff.}.
+\noindent Resonanzkreise lassen sich generell in Reihenresonanzkreise (Abbildung \ref{resonance_circuit_serial_1}) und Parallelresonanzkreise (Abbildung \ref{resonance_circuit_parallel}) einteilen. Parallelresonanzkreise weisen die Eigenschaft auf, dass die Spannung an allen Stellen der Schaltung gleich und der Strom jeweils abhängig von den Bauelementen an der Messstelle ist. In einem Reihenresonanzkreis hingegen fließt an allen Stellen der gleiche Strom. Die Spannung an den Bauelementen variiert abhängig von der Dimensionierung jener. Diese Eigenschaften machen den Parallelresonanzkreis an dieser Stelle uninteressant. Deshalb wird Dieser in diesem Dokument nicht weiter Thematisiert und im Folgendem ist mit einem Resonanzkreis immer ein Reihenresonanzkreis gemeint. Ein Resonanzkreis ist, wie der Name vermuten lässt, ein schwingfähiges System. Um zu verstehen wie diese Schwingungen zustande kommen, ist es sinnvoll sich zunächst einmal mit den beiden wichtigsten Bauelementen eines Resonsnzkreises, nämlich dem Kondensator \textbf{C} und der Spule \textbf{L}, zu befassen\footnote{Hagmann, Gerd: Grundlagen der Elektrotechnik. 16. Auflage: AULA-Verlag GmbH, S. 296 ff.}.
 \clearpage
 \capacitor
 \coil
@@ -69,7 +69,7 @@
   \label{eq:tauCapacitor}
 \end{equation}
 
-\noindent Generell gilt, dass ein anfangs komplett entladener Kondensator nach Ablauf eines \(\tau \) auf 63\% der Betriebsspannung \textbf{U} geladen und der Ladestrom \(I_c\) auf 37\% von \(I_{cMax}\) abgefallen ist. Nach Ablauf eines weiteren \(\tau \) ist \(U_c\) nochmals um 63\% der Differenz zwischen \textbf{U} und \(U_c\) angestiegen und \(I_c\) auf 37\% des letzten \(I_c\) abgefallen. Dies führt sich mit jedem Ablauf weiterer \(\tau \) fort, sodass erkennbar wird, dass ein Ladestatus von 100\% nie erreicht wird. Nach Ablauf von \(5\tau \) gilt ein Kondensator mit 99,3\% praktisch als voll aufgeladen und es ergibt sich eine Ladekurve nach dem wie auf Abbildung \ref{charge_capacitor} dargestellten Beispiel. 
+\noindent Generell gilt, dass ein anfangs komplett entladener Kondensator nach Ablauf eines \(\tau \) auf 63\% der Betriebsspannung \textbf{U} geladen und der Ladestrom \(I_c\) auf 37\% von \(I_{cMax}\) abgefallen ist. Nach Ablauf eines weiteren \(\tau \) ist \(U_c\) nochmals um 63\% der Differenz zwischen \textbf{U} und \(U_c\) angestiegen und \(I_c\) auf 37\% des letzten \(I_c\) abgefallen. Dies führt sich mit jedem Ablauf weiterer \(\tau \) fort, sodass erkennbar wird, dass ein Ladestatus von 100\% nie erreicht wird. Nach Ablauf von \(5\tau \) gilt ein Kondensator mit 99,3\% praktisch als voll aufgeladen\footnote{Stiny: Grundwissen Elektrotechnik, S. 141 f.} und es ergibt sich eine Ladekurve nach dem folgenden Beispiel. 
 
 \clearpage
 
@@ -148,7 +148,7 @@
   \label{eq:tauCoil}
 \end{equation}
 
-\noindent Nach Ablauf eines \(\tau \) erreicht der Strom \(I_l\) in der Spule etwa 63\% des Gesamtstroms und nach \(5\tau \) erreicht dieser 99,3\%. Ab diesem Zeitpunkt wird der Einschaltvorgang in der Regel als abgeschlossen angesehen. Visuell dargestellt ergibt sich für den Einschaltvorgang einer Spule ein Diagramm nach folgendem Beispiel.
+\noindent Nach Ablauf eines \(\tau \) erreicht der Strom \(I_l\) in der Spule etwa 63\% des Gesamtstroms und nach \(5\tau \) erreicht dieser 99,3\%. Ab diesem Zeitpunkt wird der Einschaltvorgang in der Regel als abgeschlossen angesehen\footnote{Stiny: Grundwissen Elektrotechnik, S. 147 f.}. Visuell dargestellt ergibt sich für den Einschaltvorgang einer Spule ein Diagramm nach folgendem Beispiel.
 
 \clearpage
 
@@ -193,7 +193,7 @@
 %	Serial Resonance circuit
 %----------------------------------------------------------------------------------------
 \newcommand*{\serialResonanceCircuit}{\begingroup
-\section{Reihenresonanzkreis}\label{sec:serialresonancecircuit}
+\subsection{Reihenresonanzkreis}\label{sec:serialresonancecircuit}
 {\noindent 
 \begin{wrapfigure}{r}{0.5\textwidth}
     \begin{minipage}[r]{0.5\textwidth}
@@ -207,7 +207,7 @@
       \vspace{-10pt}  
     \end{minipage}  
 \end{wrapfigure}
-\noindent Gegeben sei eine Schaltung bestehend aus einem geladenen Kondensator \textbf{C}, einer Spule \textbf{L} und frei von Widerständen. (Abbildung \ref{resonance_circuit_simple}) Der Kondensator entlädt sich über die Spule. Wie in Kapitel \ref{sec:coil} erläutert, wirkt die induzierte Spannung \(U_l\) der Betriebsspannung, also der Kondensatorspannung \(U_l\), entgegen. Nach \(5\tau \) ist sowohl der Einschaltvorgang der Spule abgeschlossen als auch der Kondensator komplett entladen. Da \(U_l = 0\) ist, hat der Strom seinen Maximum erreicht. Die im Magnetfeld der Spule gespeicherte Energie \(W_l\) treibt diesen Strom weiter und lädt den Kondensator in entgegengesetzter Richtung auf.
+\noindent Gegeben sei eine Schaltung bestehend aus einem geladenen Kondensator \textbf{C}, einer Spule \textbf{L} und frei von Widerständen. (Abbildung \ref{resonance_circuit_simple}) Der Kondensator entlädt sich über die Spule. Wie in Kapitel \ref{sec:coil} erläutert, wirkt die induzierte Spannung \(U_l\) der Betriebsspannung, also der Kondensatorspannung \(U_c\), entgegen. Nach \(5\tau \) ist sowohl der Einschaltvorgang der Spule abgeschlossen als auch der Kondensator komplett entladen. Da \(U_l = 0\) ist, hat der Strom seinen Maximum erreicht. Die im Magnetfeld der Spule gespeicherte Energie \(W_l\) treibt diesen Strom weiter und lädt den Kondensator in entgegengesetzter Richtung auf.
 
 \clearpage
 
@@ -235,7 +235,7 @@
     \end{minipage}  
 \end{wrapfigure}
 
-\noindent Die Spannungsquelle wirkt dem Abklingen der Schwingung entgegen indem Diese dem System mit der Frequenz \(f_0\) kontinuierlich neue Energie zuführt. Neben den reellen Widerständen beeinflussen Blindwiderstände die Schwingung. Zusammengefasst spricht man von der Impedanz \textbf{Z}. Diese wird als komplexe Zahl dargestellt, wobei die reellen Widerstände den Realteil und die Blindwiderstände den Imaginärteil darstellen.
+\noindent Die Spannungsquelle wirkt dem Abklingen der Schwingung entgegen indem Diese dem System mit der Frequenz \(f\) kontinuierlich neue Energie zuführt. Neben den reellen Widerständen beeinflussen Blindwiderstände die Schwingung. Zusammengefasst spricht man von der Impedanz \textbf{Z}. Diese wird als komplexe Zahl dargestellt, wobei die reellen Widerstände den Realteil und die Blindwiderstände den Imaginärteil darstellen.
 
 \begin{equation}
   Z = R + j \cdot (\omega L - \frac{1}{\omega C})
